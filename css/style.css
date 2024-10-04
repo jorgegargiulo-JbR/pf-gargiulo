@@ -512,11 +512,15 @@ input, textarea {
     height: 100%;
     margin: 0 auto;
   }
+  footer .datos .ensayos p{
+    padding: 0;
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
   footer .datos .direccion ul{
     padding-left: 0;
   }
-  .copyright{
-    margin: 0.9375rem;
+  footer .copyright{
     font-size: 0.625rem;
   }
   /* Main de INDEX */
