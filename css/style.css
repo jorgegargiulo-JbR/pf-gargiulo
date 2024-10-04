@@ -189,8 +189,9 @@ footer .datos .ensayos p {
   font-weight: bold;
   font-size: 1.875rem;
 }
-footer .datos address {
-  font-style: normal;
+footer .datos .direccion ul{
+  list-style: none;
+  text-align: center;
   line-height: 1.5;
   padding-top: 0.9375rem;
 }
@@ -476,50 +477,53 @@ input, textarea {
 }
 
 /* MEDIA QUERY PARA DISPOSITIVOS MÓVILES */
-@media screen and (min-width: 320px) and (max-width: 767.9px) {
+@media screen and (min-width: 320px) and (max-width: 767.9px){
   /* Header - común para los 5 HTML */
-  header .header1 {
+  header .header1{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 0.125rem;
   }
-  .header1 h2 {
+  .header1 h2{
     font-size: 1.5rem;
   }
-  .header1 p {
+  .header1 p{
     margin: 5px 0;
   }
-  .logo {
+  .logo{
     text-align: center;
     margin-bottom: 10px;
   }
-  .logo img {
+  .logo img{
     width: 80%;
     max-width: 150px;
   }
   /* Footer - común para los 5 HTML */
-  footer {
+  footer{
     text-align: center;
   }
-  footer .datos {
+  footer .datos{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: .3125rem;
+    height: 100%;
+    margin: 0 auto;
   }
-  footer address, footer .telefonos {
-    margin-bottom: 10px;
+  footer .datos .direccion ul{
+    padding-left: 0;
   }
-  .copyright {
+  .copyright{
     margin: 0.9375rem;
     font-size: 0.625rem;
   }
   /* Main de INDEX */
-  main .contenido {
+  main .contenido{
     padding: 10px;
   }
-  main .contenido h1 {
+  main .contenido h1{
     padding-top: 3%;
     padding-bottom: 2%;
     text-align: center;
@@ -527,37 +531,37 @@ input, textarea {
     font-weight: bolder;
     margin-top: 0.9375rem;
   }
-  .cajaFotosCuerpo {
+  .cajaFotosCuerpo{
     display: flex !important;
     flex-direction: column;
     align-items: center;
   }
-  .cajaFotosCuerpo img {
+  .cajaFotosCuerpo img{
     width: 100%;
     max-width: 31.25rem;
     margin-bottom: 10px;
   }
-  main .contenido article {
+  main .contenido article{
     font-size: 0.9375rem;
     margin-top: 5%;
     margin-bottom: 10%;
   }
-  main .servicios {
+  main .servicios{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  main .servicios .tilde {
+  main .servicios .tilde{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 11.25rem;
   }
-  .tilde img {
+  .tilde img{
     width: 120px;
   }
-  .tilde h3 {
+  .tilde h3{
     text-align: center;
     font-size: 1.125rem;
   }
