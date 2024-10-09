@@ -2,3 +2,48 @@
 @import "../utilidades/variables";
 // import de mixin
 @import "../utilidades/mixins";
+
+
+/* Estilos para el header*/
+header {
+    position: fixed;
+    background-color: $back;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    .header1{
+        display: flex;
+        background-color: $crins;
+        font-size: 0.9375rem;
+        color: $back;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: .375rem;
+        padding-bottom: 0.375rem;
+        h2{
+            font-size: 0.9375rem;
+            margin-bottom: 0;    
+        }
+        .mail, .phone{
+            display: flex;
+            font-size: 0.9375rem;
+            margin-bottom: 0;
+            align-items: center;
+            gap: 0.5rem;
+            i{
+                color: $iconos;
+            }
+        }    
+    }
+    .logo img{
+        display: block;
+        margin: 0 auto;
+        margin-top: .625rem;
+        margin-bottom: .625rem;
+        width: 12.5rem;
+
+
+    }
+
+}
+

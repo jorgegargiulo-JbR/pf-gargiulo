@@ -2,3 +2,328 @@
 @import "../utilidades/variables";
 // import de mixin
 @import "../utilidades/mixins";
+
+
+/* Estilos para el main de INDEX */
+main {
+    margin-top: 12.5rem;
+    background-image: url(../assets/comodoro2-laptop-l.avif);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+    .contenido{
+        background-color: $contenido;
+        position: relative;
+        margin: 0 3%;
+        h1{
+            padding-top: 4%;
+            padding-bottom: 3%;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
+        .cajaFotosCuerpo{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0 0.9375rem;
+            gap: 0.9375rem;
+            justify-items: center;
+            align-items: center;
+            img{
+                width: 31.25rem;
+                height: auto;
+                object-fit: cover;
+                max-width: 100%;
+                border-radius: .5rem;
+            }
+        }
+    article{
+        font-size: 1.25rem;
+        margin: 5%;
+            #historia{
+                padding-top: 13.75rem;
+                margin-top: -13.75rem;
+            }
+        }
+    }
+    .servicios{
+        display: flex;
+        justify-content: space-around;
+        .tilde{
+            @include flex-column;
+            text-align: center;
+            width: 12.5rem;
+            height: 15.625rem;
+                img{
+                    max-width: 100%;
+                    height: auto;
+            }
+                a{
+                    margin: 0;
+                    padding: 0;
+                    color: $fonts-color-def;
+                    text-decoration: none;
+                    &:hover{
+                        color: $crins;
+                    }
+                    h3{
+                        font-size: 1.3rem;
+                        span{
+                            display: block;
+                        }
+                    }
+            }
+        }
+    }
+}
+
+/* Estilos para el main de SERVICIOS */
+main .contenido{
+    height: 100%;
+    padding-bottom: 0.625rem;
+    .titulo{
+        @include flex-center;
+        gap: 0.625rem;
+        h1, h2{
+            padding-top: 4%;
+            padding-bottom: 0;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
+    }
+}
+main .losServicios{
+    margin: 5.625rem;
+    h3{
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.875rem;
+        color: $fonts-color-def;
+    }
+    .caja1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6.25rem;
+        max-width: 80vw;
+        margin: 0 auto;
+        img{
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: .5rem;
+        }
+        p{
+            max-width: 55%;
+            text-align: left;
+            padding-left: 4.375rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: $fonts-color-def;
+        }
+    }
+}
+
+// otros servicios
+main #os{
+    margin: 1.25rem;
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    color: $fonts-color-def;
+}
+
+main .otrosServicios{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    .servicio{
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        h3{
+            margin-bottom: .625rem;
+            font-size: 1.5625rem;
+            color: $fonts-color-def;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+            margin-bottom: .625rem;
+            border-radius: .5rem;
+        }
+        p{
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: $fonts-color-def;
+            text-align: left;
+            margin-bottom: 1.25rem;
+            margin-left: 6%;
+        }
+    }
+}
+
+#lp, #pm, #me, #ph, #os {
+    scroll-margin-top: 15.625rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* Estilos para el main de TRABAJOS */
+main .contenido2 {
+    @include flex-column;
+    background-color: $contenido;
+    position: relative;
+    margin: 0 3%;
+    .titulo{
+        @include flex-center;
+        gap: 0.625rem;
+        h1, h2{
+            padding-top: 5%;
+            padding-bottom: 2%;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
+    }
+    .losTrabajos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        margin-top: 1.25rem;
+        width: 100%;
+        max-width: 1600px;
+        margin-bottom: 1.875rem;
+        .trabajo{
+            @include flex-column;
+            text-align: center;
+            img{
+                width: 80%;
+                height: 25rem;
+                object-fit: cover;
+                border-radius: .5rem;
+            }
+            p{
+                margin-top: 0.625rem;
+                margin-bottom: 0;
+                font-size: 1.5625rem;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+
+/* Estilos para el main de CLIENTES */
+main .contenido2 .losClientes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.6875rem 0;
+    width: 100%;
+    max-width: 1600px;
+    padding-left: 6.25rem;
+    margin-bottom: 1.875rem;
+    img{
+        width: 80%;
+        height: 31.25rem;
+        object-fit: contain;
+    }
+}
+
+
+/* Estilos para el mail de CONTACTO */
+main .contenido3 {
+    @include flex-column;
+    background-color: $contenido;
+    position: relative;
+    margin: 0 3%;
+    .titulo{
+        @include flex-center;
+        gap: 0.625rem;
+        h1, h2{
+            padding-top: 6%;
+            padding-bottom: 3%;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
+    }
+    .formulario-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1.25rem;
+        align-items: start;
+        padding: 1.25rem;
+        .mapa{
+            display: grid;
+            grid-template-rows: 1fr auto;
+            gap: .625rem;
+            align-items: center;
+            justify-items: center;
+            img{
+                width: 100%;
+                padding-bottom: 0.625rem;
+                height: auto;
+                border-radius: .5rem;
+            }
+            p{
+                font-size: 1.875rem;
+                margin: 0;
+                text-align: center;
+                padding-bottom: 0.625rem;
+            }
+        }
+    }
+  }
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    background-color: $crins-transp;
+    font-weight: bold;
+    border: 0.0625rem solid $crins;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.submit-btn:hover {
+    color: $back;
+    background-color: $crins;
+}
+
+
+
+
+
+

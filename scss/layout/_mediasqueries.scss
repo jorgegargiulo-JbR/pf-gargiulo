@@ -2,3 +2,435 @@
 @import "../utilidades/variables";
 // import de mixin
 @import "../utilidades/mixins";
+
+
+/* MEDIA QUERY PARA DISPOSITIVOS MÓVILES */
+@media screen and (min-width: 320px) and (max-width: 767.9px){
+    /* Header - común para los 5 HTML */
+    header{
+        .header1{
+            @include flex-column;
+            text-align: center;
+            padding: 0.125rem;
+            h2{
+                margin-top: .25rem;
+                font-size: .75rem;
+            }
+            p{
+                margin: .0625rem 0;
+                font-size: .6875rem;
+            }
+        }
+        .logo{
+            text-align: center;
+            margin-bottom: .625rem;
+            img{
+                width: 80%;
+                max-width: 9.375rem;
+            }
+        }
+    }
+    .transparent-rectangle .seleccionarPag {
+        margin-bottom: 0 !important;
+        margin-left: 10%;
+        white-space: nowrap;
+      }
+
+/* Footer - común para los 5 HTML */
+    footer{
+        text-align: center;
+        .datos{
+            @include flex-column;
+            gap: .3125rem;
+            height: 100%;
+            margin: 0 auto;
+            .ensayos p{
+                padding: 0;
+                font-size: 1.25rem;
+                margin-bottom: 0;
+            }
+            .direccion ul{
+                padding-left: 0;
+            }
+        }
+        .copyright{
+            font-size: 0.625rem;
+        }
+    }
+
+/* Main de INDEX */
+main{
+    .contenido{
+        padding: .625rem;
+        h1{
+            padding-top: 1%;
+            padding-bottom: 4%;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: bolder;
+            margin-top: 0.9375rem;
+        }
+        .cajaFotosCuerpo{
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 100%;
+                max-width: 31.25rem;
+                margin-bottom: .625rem;
+            }
+        }
+        article{
+            font-size: 0.9375rem;
+            margin-top: 5%;
+            margin-bottom: 10%;
+        }
+        .servicios{
+            @include flex-column;
+            gap: 1.25rem;
+            .tilde{
+                @include flex-column;
+                height: 11.25rem;
+                img{width: 7.5rem;}
+                h3{
+                    text-align: center;
+                    font-size: 1.125rem;    
+                }
+            }
+        }
+    }
+}
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+/* Barra de navegación común para los 5 HTML */
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+        background-color: $navbar;
+        .collapse.show{
+            background-color: $crins-transp;
+        }
+        .navbar-toggler{
+            margin: 0 auto;
+            border: none;
+            :focus, :active{
+                outline: none;
+                box-shadow: none;
+                background-color: transparent;
+                border: none;
+            }
+        }
+        .navbar-nav{
+            text-align: center;
+        }
+    }
+
+/* Main de TRABAJOS */
+    main{
+        .contenido2{
+            .titulo{
+                display: block !important;
+                text-align: center;
+                h2{
+                    font-size: 1.25rem;
+                    white-space: nowrap;
+                    padding-top: 1.875rem;    
+                }
+                h1{
+                    font-size: 1.25rem;
+                    white-space: nowrap;
+                    padding-top: 0.625rem;    
+                }
+            }
+            .losTrabajos{
+                display: flex !important;
+                flex-direction: column;
+                gap: 0.9375rem;
+                align-items: center;
+                .trabajo{
+                    width: 100%;
+                    text-align: center;
+                    img{
+                        max-width: 100%;
+                        height: auto !important;
+                    }
+                    p{
+                        margin-top: 0.3125rem;
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+/* Main de SERVICIOS */
+    main{
+        .contenido{
+            .titulo{
+                display: block !important;
+                text-align: center;
+                h2{
+                    font-size: 1.25rem;
+                    white-space: nowrap;
+                    padding-top: 1.25rem;
+                }
+                h1{
+                    font-size: 1.25rem;
+                    white-space: nowrap;
+                    padding-top: 0.1875rem;
+                }
+            }
+            .losServicios{
+                @include flex-column;
+                justify-content: center;
+                margin: 0;
+                h3{
+                    text-align: center;
+                    font-size: 1.25rem;
+                    margin-top: 1.5625rem;
+                }
+                .caja1{
+                    display: flex;
+                    flex-direction: column;
+                    img{
+                        max-width: 31.25rem;
+                    }
+                    p{
+                        padding: 0.9375rem 0 0.5rem 0;
+                        max-width: 100%;
+                        font-size: 1rem;
+                    }    
+                }
+            }
+            section{
+                #os{
+                    font-size: 1.25rem;
+                    font-weight: bolder;
+                    padding-top: 0.9375rem;
+                }
+                .otrosServicios{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5625rem;
+                    .servicio{
+                        h3{
+                            font-size: 1.25rem;
+                            padding-bottom: 0.3125rem;        
+                        }
+                        p{
+                            text-align: left;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #lp, #pm, #me, #ph, #os {
+        scroll-margin-top: 13.75rem;
+    }
+
+
+/*Main de CLIENTES */
+    main{
+        .contenido2{
+            .losClientes{
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                gap: 3.125rem;
+                img{
+                    display: block;
+                    width: 18.75rem;
+                    height: 25rem;
+                    margin-right: 6.25rem;    
+                }
+            }
+        }
+    }
+
+
+/* Main de CONTACTO */
+    main{
+        .contenido3{
+            .titulo{
+                display: block !important;
+                text-align: center;
+                h2{
+                    font-size: 1.25rem;
+                    white-space: nowrap;
+                    padding-top: 1.875rem;
+                }
+                h1{
+                    font-size: 1.25rem;
+                    white-space: nowrap;
+                    padding-top: 0;    
+                }
+            }
+            .formulario-container{
+                grid-template-columns: 1fr;
+                gap: 0.625rem;
+                .mapa{
+                    img{
+                        width: 100%;
+                    }
+                    p{
+                        font-size: 1.0625rem;
+                        margin-bottom: 0.625rem;
+                        padding-top: 0;    
+                    }
+                }
+            }
+        }
+    }
+    .submit-btn {
+        width: 40%;
+    }
+}
+
+/* MEDIA QUERY PARA TABLET */
+@media screen and (min-width: 767.9px) and (max-width: 1025px) {
+    /* Main de INDEX */
+    main .contenido {
+        padding: .625rem;
+        h1{
+            padding-top: 3%;
+            padding-bottom: 3%;
+            text-align: center;
+            font-size: 1.5625rem;
+            font-weight: bolder;
+    }
+    .cajaFotosCuerpo{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+        img{
+            width: 95%;
+            margin-bottom: 0.9375rem;
+        }
+    }
+    article{
+        font-size: 0.9375rem;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        text-align: left;
+        padding-left: 3.5%;
+    }
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "lp pm me" "ph .  os";
+        gap: 0.9375rem;
+        justify-items: center;
+        align-items: center;
+        .tilde{
+            @include flex-column;
+            max-width: 7.5rem;
+            height: 11.25rem;
+            &:nth-child(3){
+                grid-area: me;
+            }
+            &:nth-child(4){
+                grid-area: ph;
+            }
+            &:nth-child(5){
+                grid-area: os;
+            }
+            img{
+                width: 7.5rem;
+            }
+            h3{
+                font-size: 0.9375rem !important;
+            }
+        }
+    }
+    }
+/* Estilos para el main de SERVICIOS */
+    main{
+        .contenido{
+            .titulo{
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                gap: 0.625rem;
+                h1, h2{
+                    padding-top: 3%;
+                    padding-bottom: 0;
+                    text-align: center;
+                    font-size: 1.5625rem;
+                    font-weight: bolder;
+                }
+            }
+            section{
+                .otrosServicios{
+                    flex-direction: column;
+                    align-items: center;
+                    .servicio{
+                        width: 100%;
+                        p{
+                            text-align: left;
+                            margin-left: 5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+/* Estilos para el main de TRABAJOS */
+    main{
+        .contenido2{
+            .titulo{
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                gap: .625rem;
+                    h1, h2{
+                        padding-top: 5%;
+                        padding-bottom: 0;
+                        text-align: center;
+                        font-size: 1.5625rem;
+                        font-weight: bolder;
+                }
+            }
+            .losTrabajos{
+                p{
+                    padding-top: 0.625rem;
+                    padding-bottom: 1.25rem;
+                    font-size: 1.5625rem !important;
+                }
+            }
+        }
+    }
+    
+/* Estilos para el main de CONTACTO */
+    main{
+        .contenido3{
+            .titulo{
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                gap: .625rem;
+                h1, h2{
+                    padding-top: 5%;
+                    padding-bottom: 0;
+                    text-align: center;
+                    font-size: 1.5625rem;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
+
+/* Ajuste para pantallas superiores a 1440 px */
+@media (min-width: 1441px){
+    body, header{
+        max-width: 100%;
+    }
+  }
+

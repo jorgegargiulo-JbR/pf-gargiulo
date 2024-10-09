@@ -1,0 +1,44 @@
+// import de variables
+@import "../utilidades/variables";
+// import de mixin
+@import "../utilidades/mixins";
+
+/* Barra de navegación Bootstrap */
+.navbar {
+    background-color: $navbar;
+    transition: background-color 0.3s ease;
+    .nav-link{
+        color: $fonts-color-def;
+        font-size: 1.25rem;
+        font-weight: bold;
+        &:hover{
+            color: $crins;
+        }
+    }.navbar-toggler{
+        margin-left: 80%;
+        &:hover{
+            color: $crins;
+        }
+    }
+}
+.transparent-rectangle {
+    width: 70vw;
+    height: auto;
+    background-color: $crins-transp;
+    @include flex-center;
+    padding: .625rem;
+    margin: 0 auto;
+    .seleccionarPag{
+        margin-bottom: 0 !important;
+        margin-left: 20%;
+        white-space: nowrap;
+    }
+
+}
+
+
+@media (min-width: 992px) {
+    .transparent-rectangle {
+      display: none;
+    }
+}  

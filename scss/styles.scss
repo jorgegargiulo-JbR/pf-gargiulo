@@ -3,7 +3,8 @@
 @import "base/reset"; // Elimina estilo por defecto de los navegadores. Prioridad 1.
 @import "utilidades/variables";  // Deben estar disponibles antes de su uso en cualquier otro archivo. Prioridad 2.
 @import "utilidades/mixins";  // Deben estar definidos antes de ser utilizados, por eso se importan luego de la variables. Prioridad 3.
-@import "base/home";  // Contiene estilos específicos de la página y, aprovecha los imports anteriores.
-@import "layout/header";  // Idem anterior.
+@import "layout/header";  // Contiene estilos específicos de la página y, aprovecha los imports anteriores.
 @import "layout/navegacion";  // Idem anterior.
 @import "layout/footer";  // Idem anterior.
+@import "base/home";  // Idem anterior.
+@import "layout/mediasqueries"; // Idem anterior.
